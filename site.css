@@ -1,0 +1,57 @@
+body {
+  background-image: url("images/Stars.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  font-family: Georgia, serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+nav, footer {
+  padding: 1rem 0;
+}
+
+nav a {
+  margin-right: 1rem;
+  color: white;
+}
+
+.gallery-menu {
+  display: inline-block;
+  position: relative;
+  margin-right: 1rem;
+}
+
+.gallery-menu summary {
+  cursor: pointer;
+}
+
+.gallery-menu summary::marker {
+  content: "";
+}
+
+.gallery-dropdown {
+  background: rgb(59, 6, 54);
+  border: 1px solid #120013;
+  list-style: none;
+  margin: 0;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+}
+
+.gallery-dropdown a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.gallery-dropdown a:hover {
+  background: #7a4274;
+}
