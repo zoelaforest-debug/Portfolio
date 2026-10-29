@@ -27,7 +27,26 @@
       gap: 1rem;
     }
     #about .zigzag-images {
-      gap: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    #about .zigzag-images > :not(:first-child) {
+      margin-top: -0.5rem;
+    }
+    #about .zigzag-images > :nth-child(odd) {
+      align-self: flex-start;
+    }
+    #about .zigzag-images > :nth-child(even) {
+      align-self: flex-end;
+    }
+    @media (min-width: 1000px) {
+      #about .zigzag-images > :nth-child(odd) {
+        transform: translateX(140px);
+      }
+      #about .zigzag-images > :nth-child(even) {
+        transform: translateX(-140px);
+      }
     }
     .zigzag-images > :nth-child(odd) {
       justify-self: start;
@@ -79,7 +98,7 @@
     <section id="about">
       <h1>Zoe Laforest</h1>
       <img src="images/Centipede 3.0.png" alt="Description of the image">
-      <p>I am an artist originally from Southern California, specifically from Tustin, Orange County. I have lived in Quebec Canada, San Jose, and am currently based in Gilroy.   </p>
+      <p>I am an artist originally from Southern California, specifically from Tustin, Orange County. I have lived in Quebec Canada, San Jose, and am currently based in Gilroy. I am currnetly a student at San Jose Sate Universit   </p>
       <div class="zigzag-images">
         <a href="Digital_Art.html"><img src="images/Digital Art Button.png" alt="Digital Art"></a>
         <a href="Sculptures.html"><img src="images/Sculptures Button.png" alt="Sculptures"></a>
