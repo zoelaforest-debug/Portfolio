@@ -54,23 +54,23 @@
     #about h1 {
       font-size: 2.25rem;
     }
-    .about-photos {
+    .zigzag-images {
       display: grid;
       grid-template-columns: minmax(0, 1fr);
       gap: 1rem;
     }
-    .about-photos > :nth-child(odd) {
+    .zigzag-images > :nth-child(odd) {
       justify-self: start;
     }
-    .about-photos > :nth-child(even) {
+    .zigzag-images > :nth-child(even) {
       justify-self: end;
     }
-    .about-photos > a,
-    .about-photos > img {
+    .zigzag-images > a,
+    .zigzag-images > img {
       display: block;
       width: min(320px, 100%);
     }
-    .about-photos img {
+    .zigzag-images img {
       display: block;
       width: 100%;
       max-width: 100%;
@@ -94,7 +94,7 @@
         <summary>Projects</summary>
         <ul class="gallery-dropdown">
           <li><a href="#projects">Projects overview</a></li>
-          <li><a href="Giltch.html">Giltch</a></li>
+          <li><a href="Glitch.html">Glitch</a></li>
           <li><a href="Meme.html">Meme</a></li>
           <li><a href="3D.html">3D</a></li>
           <li><a href="net_art.html">Net Art</a></li>
@@ -110,7 +110,7 @@
       <h1>Zoe Laforest</h1>
       <img src="images/Centipede 3.0.png" alt="Description of the image">
       <p>I am an artist originally from Southern California, specifically from Tustin, Orange County. I have lived in Quebec Canada, San Jose, and am currently based in Gilroy.   </p>
-      <div class="about-photos">
+      <div class="zigzag-images">
         <a href="Digital_Art.html"><img src="images/Digital Art Button.png" alt="Digital Art"></a>
         <a href="Sculptures.html"><img src="images/Sculptures Button.png" alt="Sculptures"></a>
         <a href="Sketchbook.html"><img src="images/Sketchbooks Button.png" alt="Sketchbooks"></a>
@@ -121,6 +121,11 @@
     <section id="projects">
       <h2>Projects</h2>
       <p>Add a few projects you’re proud of here.</p>
+      <div class="zigzag-images">
+        <a href="3D.html"><img src="images/3D Button.png" alt="3D"></a>
+        <a href="Glitch.html"><img src="images/Glitch Button.png" alt="Glitch"></a>
+        <a href="Meme.html"><img src="images/Meme Button.png" alt="Meme"></a>
+      </div>
     </section>
   </main>
 
