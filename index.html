@@ -40,7 +40,7 @@
       color: white;
       font-family: Georgia, serif;
     }
-    #about img {
+    #about > img {
       width: 95vw;
       max-width: none;
       height: auto;
@@ -53,6 +53,17 @@
     }
     #about h1 {
       font-size: 2.25rem;
+    }
+    .about-photos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .about-photos img {
+      width: 220px;
+      max-width: 100%;
+      height: auto;
     }
   </style>
 </head>
@@ -88,6 +99,12 @@
       <h1>Zoe Laforest</h1>
       <img src="images/Centipede 3.0.png" alt="Description of the image">
       <p>I am an artist originally from Southern California, specifically from Tustin, Orange County. I have lived in Quebec Canada, San Jose, and am currently based in Gilroy.   </p>
+      <div class="about-photos">
+        <a href="Digital_Art.html"><img src="images/Digital Art Button.png" alt="Digital Art"></a>
+        <a href="Sculptures.html"><img src="images/Sculptures Button.png" alt="Sculptures"></a>
+        <a href="Sketchbook.html"><img src="images/Sketchbooks Button.png" alt="Sketchbooks"></a>
+        <a href="Meet_The_Artist.html"><img src="images/Self portrait resized.png" alt="Self-portrait of Zoe Laforest"></a>
+      </div>
     </section>
 
     <section id="projects">
