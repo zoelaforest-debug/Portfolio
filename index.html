@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zoe Laforest | Portfolio</title>
   <link rel="stylesheet" href="site.css">
-  <link rel="icon" type="image/png" href="images/Ladybug%20logo.png">
+  <link rel="icon" type="image/png" href="images/Centipede%203.0%20(2).png">
   <style>
     #about > img {
       width: 95vw;
@@ -28,25 +28,19 @@
     }
     #about .zigzag-images {
       display: flex;
-      flex-direction: column;
-      gap: 0;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
     }
-    #about .zigzag-images > :not(:first-child) {
-      margin-top: -0.5rem;
-    }
-    #about .zigzag-images > :nth-child(odd) {
-      align-self: flex-start;
-    }
-    #about .zigzag-images > :nth-child(even) {
-      align-self: flex-end;
-    }
-    @media (min-width: 1000px) {
-      #about .zigzag-images > :nth-child(odd) {
-        transform: translateX(140px);
-      }
-      #about .zigzag-images > :nth-child(even) {
-        transform: translateX(-140px);
-      }
+    #projects .zigzag-images {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
     }
     .zigzag-images > :nth-child(odd) {
       justify-self: start;
@@ -58,12 +52,6 @@
     .zigzag-images > img {
       display: block;
       width: min(320px, 100%);
-    }
-    #projects .zigzag-images > a:first-child {
-      width: min(700px, 100%);
-    }
-    #projects .zigzag-images > a:nth-child(2) {
-      width: min(638px, 100%);
     }
     .zigzag-images img {
       display: block;
@@ -128,4 +116,4 @@
     <p>&copy; 2026 Zoe Laforest </p>
   </footer>
 </body>
-</html>
+</html>C
