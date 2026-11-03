@@ -10,6 +10,51 @@
 		body {
 			background-image: url("images/Dark Firey Background.jpg");
 		}
+		.meme-gallery {
+			max-width: 1000px;
+			margin: 2rem auto;
+		}
+		.meme-gallery h1 {
+			text-align: center;
+		}
+		.meme-grid {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 1.5rem;
+		}
+		.meme-grid figure {
+			margin: 0;
+		}
+		.meme-grid img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+		.meme-grid figcaption {
+			margin-top: 0.75rem;
+			text-align: center;
+		}
+		.meme-description {
+			max-width: 700px;
+			margin: 2rem auto 0;
+			padding: 1.25rem 1.5rem;
+			border-radius: 4px;
+			background-color: #000;
+			color: #fff;
+			text-align: center;
+			line-height: 1.6;
+		}
+		.meme-description h2 {
+			margin: 0 0 0.5rem;
+		}
+		.meme-description p {
+			margin: 0;
+		}
+		@media (max-width: 600px) {
+			.meme-grid {
+				grid-template-columns: 1fr;
+			}
+		}
 	</style>
 </head>
 <body>
@@ -39,5 +84,22 @@
 			<a href="mailto:zoe.laforest@sjsu.edu">Contact</a>
 		</nav>
 	</header>
+	<main class="meme-gallery">
+		<h1>Meme</h1>
+		<div class="meme-grid">
+			<figure>
+				<img src="images/Attack on Cera.jpg" alt="A man in a red jacket composited above an anime character overlooking a burning city">
+				<figcaption>Attack on Cera</figcaption>
+			</figure>
+			<figure>
+				<img src="images/Keanu.jpg" alt="Keanu Reeves appearing above a concert crowd with his hands raised in rock gestures">
+				<figcaption>Keanu</figcaption>
+			</figure>
+		</div>
+		<section class="meme-description" aria-labelledby="meme-description-title">
+			<h2 id="meme-description-title">About the memes</h2>
+			<p>These edits place recognizable faces in unexpected scenes, mixing pop-culture references with dramatic imagery.</p>
+		</section>
+	</main>
 </body>
 </html>
