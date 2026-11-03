@@ -10,6 +10,95 @@
 		body {
 			background-image: url("images/Dark_Ocean.jpg");
 		}
+		.sculpture-gallery {
+			max-width: 1100px;
+			margin: 2rem auto;
+		}
+		.sculpture-gallery h1 {
+			margin: 0 0 1.25rem;
+			text-align: center;
+		}
+		.sculpture-carousel {
+			display: grid;
+			grid-template-columns: 3rem minmax(0, 1fr) 3rem;
+			align-items: center;
+			gap: clamp(0.5rem, 2vw, 1.25rem);
+		}
+		.sculpture-slide {
+			min-width: 0;
+			min-height: min(70vh, 720px);
+			margin: 0;
+			display: grid;
+			grid-template-columns: minmax(0, 1.15fr) minmax(14rem, 0.85fr);
+			align-items: stretch;
+			gap: clamp(1rem, 3vw, 2rem);
+		}
+		.sculpture-slide img {
+			display: block;
+			box-sizing: border-box;
+			width: 100%;
+			height: min(68vh, 680px);
+			align-self: center;
+			background: rgba(0, 0, 0, 0.55);
+			object-fit: contain;
+		}
+		.sculpture-description {
+			align-self: center;
+			padding: clamp(1.25rem, 3vw, 2rem);
+			background: #050505;
+			color: #fff;
+			line-height: 1.7;
+		}
+		.sculpture-description h2 {
+			margin: 0 0 0.75rem;
+			font-size: 1.6rem;
+		}
+		.sculpture-description p {
+			margin: 0;
+		}
+		.sculpture-meta {
+			margin-top: 1.5rem;
+			color: #d3d3d3;
+			font-size: 0.9rem;
+		}
+		.sculpture-control {
+			width: 48px;
+			height: 48px;
+			padding: 0;
+			border: 1px solid rgba(255, 255, 255, 0.8);
+			border-radius: 2px;
+			background: rgba(0, 0, 0, 0.75);
+			color: white;
+			font-size: 1.75rem;
+			cursor: pointer;
+		}
+		.sculpture-control:hover,
+		.sculpture-control:focus-visible {
+			background: rgba(255, 255, 255, 0.2);
+			outline: 2px solid white;
+			outline-offset: 2px;
+		}
+		@media (max-width: 700px) {
+			.sculpture-carousel {
+				grid-template-columns: 2.75rem minmax(0, 1fr) 2.75rem;
+				gap: 0.5rem;
+			}
+			.sculpture-slide {
+				min-height: 0;
+				grid-template-columns: minmax(0, 1fr);
+				gap: 1rem;
+			}
+			.sculpture-slide img {
+				height: min(58vh, 520px);
+			}
+			.sculpture-description {
+				padding: 1.25rem;
+			}
+			.sculpture-control {
+				width: 44px;
+				height: 44px;
+			}
+		}
 	</style>
 </head>
 <body>
@@ -38,5 +127,105 @@
 			<a href="mailto:zoe.laforest@sjsu.edu">Contact</a>
 		</nav>
 	</header>
+	<main class="sculpture-gallery" aria-labelledby="sculpture-title">
+		<h1 id="sculpture-title">Sculptures</h1>
+		<section class="sculpture-carousel" aria-label="Sculpture gallery">
+			<button class="sculpture-control" id="previous-sculpture" type="button" aria-label="Previous sculpture" title="Previous sculpture">
+				<span aria-hidden="true">&#8592;</span>
+			</button>
+			<article class="sculpture-slide" aria-live="polite" aria-atomic="true">
+				<img id="sculpture-image" src="images/Bucket 1.jpg" alt="A close-up of a rounded clay face with textured, hand-shaped features">
+				<section class="sculpture-description" aria-labelledby="sculpture-caption">
+					<h2 id="sculpture-caption">Bucket 1</h2>
+					<p id="sculpture-text">A close-up of a rounded clay face with textured, hand-shaped features.</p>
+					<p class="sculpture-meta" id="sculpture-count">1 / 8</p>
+				</section>
+			</article>
+			<button class="sculpture-control" id="next-sculpture" type="button" aria-label="Next sculpture" title="Next sculpture">
+				<span aria-hidden="true">&#8594;</span>
+			</button>
+		</section>
+	</main>
+	<script>
+		const sculptures = [
+			{
+				src: "images/Bucket 1.jpg",
+				title: "Bucket 1",
+				alt: "A close-up of a rounded clay face with textured, hand-shaped features",
+				description: "A close-up of a rounded clay face with textured, hand-shaped features."
+			},
+			{
+				src: "images/Bucket 2.jpg",
+				title: "Bucket 2",
+				alt: "A second rounded clay face with modeled eyes, a broad nose, and rough surface details",
+				description: "A second rounded face sculpture, with modeled eyes, a broad nose, and expressive surface details."
+			},
+			{
+				src: "images/Escape.jpg",
+				title: "Escape",
+				alt: "A red octopus sculpture extends its tentacles across a dark framed panel",
+				description: "A bright red octopus sculpture spreads its tentacles across a dark framed panel."
+			},
+			{
+				src: "images/Gecko Lantern.jpg",
+				title: "Gecko Lantern",
+				alt: "A yellow gecko sculpture rests on a brown, house-shaped lantern",
+				description: "A yellow gecko curls around the top of a brown, house-shaped lantern."
+			},
+			{
+				src: "images/Human.jpg",
+				title: "Human",
+				alt: "A sculpted human face with contrasting red and natural-toned halves and colorful details",
+				description: "A sculpted human face combines contrasting red and natural-toned halves with colorful details."
+			},
+			{
+				src: "images/Feast.jpg",
+				title: "Feast",
+				alt: "A split-face sculpture with a skeletal half and decorative floral details",
+				description: "A split-face sculpture contrasts a skeletal half with a more lifelike half, topped with decorative floral details."
+			},
+			{
+				src: "images/Sphynx.jpg",
+				title: "Sphynx",
+				alt: "A sphynx cat head sculpture with large blue eyes and a jeweled chain headdress",
+				description: "A sphynx cat head sculpture features large blue eyes and an ornate chain headdress."
+			},
+			{
+				src: "images/Upstream.jpg",
+				title: "Upstream",
+				alt: "A long green and blue aquatic creature sculpture with layered scales and fins",
+				description: "A long, green-and-blue aquatic creature is built from layered scales, with prominent fins and a tail."
+			}
+		];
+		let currentSculpture = 0;
+		const sculptureImage = document.querySelector("#sculpture-image");
+		const sculptureCaption = document.querySelector("#sculpture-caption");
+		const sculptureText = document.querySelector("#sculpture-text");
+		const sculptureCount = document.querySelector("#sculpture-count");
+
+		function showSculpture(index) {
+			currentSculpture = (index + sculptures.length) % sculptures.length;
+			const sculpture = sculptures[currentSculpture];
+			sculptureImage.src = sculpture.src;
+			sculptureImage.alt = sculpture.alt;
+			sculptureCaption.textContent = sculpture.title;
+			sculptureText.textContent = sculpture.description;
+			sculptureCount.textContent = `${currentSculpture + 1} / ${sculptures.length}`;
+		}
+
+		document.querySelector("#previous-sculpture").addEventListener("click", () => {
+			showSculpture(currentSculpture - 1);
+		});
+		document.querySelector("#next-sculpture").addEventListener("click", () => {
+			showSculpture(currentSculpture + 1);
+		});
+		document.querySelector(".sculpture-carousel").addEventListener("keydown", (event) => {
+			if (event.key === "ArrowLeft") {
+				showSculpture(currentSculpture - 1);
+			} else if (event.key === "ArrowRight") {
+				showSculpture(currentSculpture + 1);
+			}
+		});
+	</script>
 </body>
 </html>
